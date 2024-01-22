@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = API_Automation
-build_property.ProjectDir = C:\Users\mmishra4\source\repos\API_Automation\
+build_property.ProjectDir = C:\Users\mmishra4\Source\Repos\API_Automation_assignment1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

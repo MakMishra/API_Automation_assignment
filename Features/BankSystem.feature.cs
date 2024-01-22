@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
-  testRunner.And(string.Format("Verify the success message \"{0}\"", successMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("VVerify the success message for created case \"{0}\"", successMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 11
   testRunner.And("Verify the account details are correctly returned in the JSON response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -175,7 +175,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
-  testRunner.And(string.Format("Verify the success message \"Account {0} deleted successfully\"", accountID), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("Verify the success message for delete case \"Account {0} deleted successfully\"", accountID), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -229,7 +229,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
-  testRunner.And(string.Format("Verify the success message \"{0}\"", depositMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("Verify success message \"{0}\"", depositMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
   testRunner.And(string.Format("Verify the new balance is {0}", newBalance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -286,7 +286,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("Verify no error is returned", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 47
-  testRunner.And(string.Format("Verify the success message \"{0}\"", withdrawMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And(string.Format("Verify the success message for withdrawal \"{0}\"", withdrawMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 48
   testRunner.And(string.Format("Verify the new balance is {0}", newBalance), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

@@ -4,7 +4,7 @@ using NUnit.Framework;
 using RestSharp;
 using TechTalk.SpecFlow;
 
-namespace API_Automation
+namespace BankSystem.SpecFlow
 {
     [Binding]
     public class BankSteps
@@ -64,8 +64,6 @@ namespace API_Automation
             Assert.AreEqual(expectedDetails.InitialBalance, actualDetails.NewBalance);
         }
 
-        // New Step Definitions for Delete Account Scenario
-
         [Given(@"Account ID is ""(.*)""")]
         public void GivenAccountIDIs(string accountID)
         {
@@ -80,14 +78,11 @@ namespace API_Automation
             var response = Helper.ExecuteRequest<ApiResponse<object>>($"account/delete/{accountID}", Method.Delete);
         }
 
-
         [Then(@"Verify the success message ""(.*)""")]
         public void ThenVerifyTheSuccessMessageForDeleteAccount(string successMessage)
         {
             Assert.AreEqual(successMessage, response.Data.Message);
         }
-
-        // New Step Definitions for Deposit and Withdraw Scenarios
 
         [Given(@"Account Number is ""(.*)""")]
         public void GivenAccountNumberIs(string accountNumber)
@@ -136,8 +131,24 @@ namespace API_Automation
             Assert.AreEqual(expectedNewBalance, actualNewBalance);
         }
 
-        [Then(@"Verify the success message ""(.*)""")]
-        public void ThenVerifyTheSuccessMessageForDepositOrWithdraw(string successMessage)
+        [Then(@"Verify the success message for withdrawal ""(.*)""")]
+        public void ThenVerifyTheSuccessMessageForWithdraw(string successMessage)
+        {
+            Assert.AreEqual(successMessage, response.Data.Message);
+        }
+
+        [Then(@"Verify success message ""(.*)""")]
+        public void ThenVerifyTheSuccessMessageForDeposit(string successMessage)
+        {
+            Assert.AreEqual(successMessage, response.Data.Message);
+        }
+        [Then(@"Verify the success message for delete case ""(.*)""")]
+        public void ThenVerifyTheSuccessMessageForDelete(string successMessage)
+        {
+            Assert.AreEqual(successMessage, response.Data.Message);
+        }
+        [Then(@"Verify the success message for created case ""(.*)""")]
+        public void ThenVerifyTheSuccessMessageForCreated(string successMessage)
         {
             Assert.AreEqual(successMessage, response.Data.Message);
         }
